@@ -11,10 +11,10 @@ body {
 background-color: #230835;
 }
 
-.container {
+.containe2 {
     text-align: center;
     background: #251951;
-    padding: 20px;
+    padding: 50px;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
@@ -48,9 +48,16 @@ button:hover {
 .timer {
     padding: 20px 0;
     font-size: 3em;
-    color: #fff;
+    color: #251951;
 }
 
 .timer span {
     padding: 0 10px;
+}
+
+.heading{
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 20px 0;
 }
