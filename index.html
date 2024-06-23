@@ -9,10 +9,124 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="containe2">
         <div class="timer-container">
             <h2>Timer</h2>
-            <div class="timer"><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span></div>
+            <div class="timer">
+                <div class="w-full h-full flex items-center justify-center">
+                    <div class="flex gap-2 flex-col sm:flex-row">
+                        <div>
+                            <div class="w-full text-center text-sm tracking-widest pb-1 heading">HOURS</div>
+                            <div class="flex gap-2">
+                                <div
+                                    class="relative w-7 h-10 px-5 py-6 text-5xl shadow-inner bg-gray-100 rounded-lg overflow-hidden">
+                                    <div id="hoursDozen" class="absolute top-0 transition-all children:pb-10">
+                                        <div class="pt-5">0</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div>6</div>
+                                        <div>7</div>
+                                        <div>8</div>
+                                        <div>9</div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="relative w-7 h-10 px-5 py-6 text-5xl shadow-inner bg-gray-100 rounded-lg overflow-hidden">
+                                    <div id="hours" class="absolute top-0 transition-all children:pb-10">
+                                        <div class="pt-5">0</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div>6</div>
+                                        <div>7</div>
+                                        <div>8</div>
+                                        <div>9</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div></div>
+                        <div>
+                            <div class="w-full text-center text-sm tracking-widest pb-1 heading">MINUTES</div>
+                            <div class="flex gap-2">
+                                <div
+                                    class="relative w-7 h-10 px-5 py-6 text-5xl shadow-inner bg-gray-100 rounded-lg overflow-hidden">
+                                    <div id="minutesDozen" class="absolute top-0 transition-all children:pb-10">
+                                        <div class="pt-5">0</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div>6</div>
+                                        <div>7</div>
+                                        <div>8</div>
+                                        <div>9</div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="relative w-7 h-10 px-5 py-6 text-5xl shadow-inner bg-gray-100 rounded-lg overflow-hidden">
+                                    <div id="minutes" class="absolute top-0 transition-all children:pb-10">
+                                        <div class="pt-5">0</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div>6</div>
+                                        <div>7</div>
+                                        <div>8</div>
+                                        <div>9</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div></div>
+                        <div>
+                            <div class="w-full text-center text-sm tracking-widest pb-1 heading">SECONDS</div>
+                            <div class="flex gap-2">
+                                <div
+                                    class="relative w-7 h-10 px-5 py-6 text-5xl shadow-inner bg-gray-100 rounded-lg overflow-hidden">
+                                    <div id="secondsDozen" class="absolute top-0 transition-all children:pb-10">
+                                        <div class="pt-5">0</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div>6</div>
+                                        <div>7</div>
+                                        <div>8</div>
+                                        <div>9</div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="relative w-7 h-10 px-5 py-6 text-5xl shadow-inner bg-gray-100 rounded-lg overflow-hidden">
+                                    <div id="seconds" class="absolute top-0 transition-all children:pb-10">
+                                        <div class="pt-5">0</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div>6</div>
+                                        <div>7</div>
+                                        <div>8</div>
+                                        <div>9</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 
+                <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span> -->
             <div class="buttons">
                 <button id="start">Start</button>
                 <button id="stop">Stop</button>
@@ -21,6 +135,7 @@
         </div>
     </div>
     <script src="JS/script.js"></script>
+    <script src="https://unpkg.com/@unocss/runtime/attributify.global.js"></script>
 </body>
 
 </html>

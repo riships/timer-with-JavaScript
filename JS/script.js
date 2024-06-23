@@ -1,12 +1,15 @@
 // Get the buttons by their IDs
-let start = document.getElementById('start');
-let stop = document.getElementById('stop');
-let reset = document.getElementById('reset');
+let startButton = document.getElementById('start');
+let stopButton = document.getElementById('stop');
+let resetButton = document.getElementById('reset');
 
-// Get the spans by their IDs to set the seconds, minutes, and hours
-let seconds = document.getElementById('seconds');
-let minutes = document.getElementById('minutes');
-let hours = document.getElementById('hours');
+// Get the div elements by their IDs to set the seconds, minutes, and hours
+let secondsDozen = document.getElementById('secondsDozen');
+let secondsUnits = document.getElementById('seconds');
+let minutesDozen = document.getElementById('minutesDozen');
+let minutesUnits = document.getElementById('minutes');
+let hoursDozen = document.getElementById('hoursDozen');
+let hoursUnits = document.getElementById('hours');
 
 // Variable to control the interval method
 let interval = null;
@@ -16,8 +19,21 @@ let mySec = 0;
 let myMin = 0;
 let myHour = 0;
 
+// Function to update the display
+function updateDisplay() {
+    // Update seconds
+    secondsDozen.style.top = `-${Math.floor(mySec / 10) * 100}%`;
+    secondsUnits.style.top = `-${(mySec % 10) * 100}%`;
+    // Update minutes
+    minutesDozen.style.top = `-${Math.floor(myMin / 10) * 100}%`;
+    minutesUnits.style.top = `-${(myMin % 10) * 100}%`;
+    // Update hours
+    hoursDozen.style.top = `-${Math.floor(myHour / 10) * 100}%`;
+    hoursUnits.style.top = `-${(myHour % 10) * 100}%`;
+}
+
 // Function to start the timer
-start.addEventListener('click', () => {
+startButton.addEventListener('click', () => {
     if (interval === null) {
         interval = setInterval(() => {
             mySec++;
@@ -29,28 +45,25 @@ start.addEventListener('click', () => {
                     myHour++;
                 }
             }
-            seconds.innerText = mySec < 10 ? "0" + mySec : mySec;
-            minutes.innerText = myMin < 10 ? "0" + myMin : myMin;
-            hours.innerText = myHour < 10 ? "0" + myHour : myHour;
+            updateDisplay();
         }, 1000); // Set interval to 1 second
     }
 });
 
 // Function to stop the timer
-stop.addEventListener('click', () => {
+stopButton.addEventListener('click', () => {
     clearInterval(interval);
-    interval=null;
+    interval = null;
 });
 
 // Function to reset the timer
-reset.addEventListener('click', () => {
+resetButton.addEventListener('click', () => {
     clearInterval(interval);
     interval = null;
     mySec = 0;
     myMin = 0;
     myHour = 0;
-    seconds.innerText = '00';
-    minutes.innerText = '00';
-    hours.innerText = '00';
-    
+    updateDisplay();
 });
+
+
