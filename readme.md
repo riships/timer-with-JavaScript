@@ -12,7 +12,7 @@ A simple timer watch interface built using HTML, CSS, and JavaScript. It allows 
 
 ## Demo
 
-You can view a live demo [https://riships.github.io/timer-with-JavaScript/](#) (link to your deployed project).
+You can view a live demo [https://riships.github.io/timer-with-JavaScript/] (link to your deployed project).
 
 ## Installation
 
